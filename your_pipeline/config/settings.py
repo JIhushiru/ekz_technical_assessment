@@ -1,5 +1,8 @@
 from pydantic import BaseModel
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Settings(BaseModel):
     api_base_url: str = os.getenv("API_BASE_URL", "http://127.0.0.1:8000/api/v1")

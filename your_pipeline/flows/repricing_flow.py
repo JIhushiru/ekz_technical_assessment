@@ -22,19 +22,23 @@ def _rules_to_ctx(rules_dict: Dict[str, Any]) -> RuleContext:
     )
 
 @task
-def extract_all(api: ApiClient) -> Dict[str, Any]:
-    vendors = api.get_vendors()
-    per_vendor = {}
-    for v in vendors:
-        vid = v["vendor_id"] if "vendor_id" in v else v["id"]
-        per_vendor[vid] = {
-            "vendor": v,
-            "brands": api.get_brands(vid),
-            "categories": api.get_categories(vid),
-            "shipping_tiers": api.get_shipping_tiers(vid),
-            "products": api.get_products(vid),
-        }
-    return {"vendors": vendors, "per_vendor": per_vendor}
+def extract_all() -> Dict[str, Any]:
+    api = ApiClient()
+    try:
+        vendors = api.get_vendors()
+        per_vendor = {}
+        for v in vendors:
+            vid = v.get("vendor_id", v.get("id"))
+            per_vendor[vid] = {
+                "vendor": v,
+                "brands": api.get_brands(vid),
+                "categories": api.get_categories(vid),
+                "shipping_tiers": api.get_shipping_tiers(vid),
+                "products": api.get_products(vid),
+            }
+        return {"vendors": vendors, "per_vendor": per_vendor}
+    finally:
+        api.close()
 
 @task
 def load_dim_tables(db: Database, extracted: Dict[str, Any]):
@@ -112,7 +116,7 @@ def repricing_flow():
     rules_ctx = _rules_to_ctx(rules_dict)
 
     log.info("Extracting from API…")
-    extracted = extract_all(api)
+    extracted = extract_all()
 
     log.info("Loading dimensions…")
     load_dim_tables(db, extracted)

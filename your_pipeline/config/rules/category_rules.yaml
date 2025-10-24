@@ -1,15 +1,5 @@
-Evergreen Merchants:
-  extra_cost: 15
-  target_margin: 0.16
-Titan Labs:
-  extra_cost: 20
-  target_margin: 0.20
-Prime Distributors:
-  extra_cost: 10
-  target_margin: 0.15
-Pacific Supply Group:
-  extra_cost: 0
-  target_margin: 0.16
-Brightside Trading:
-  extra_cost: 10
-  target_margin: 0.15
+Automotive & Industrial: 0.30
+Electronics: 0.35
+Toys & Kids: 0.25
+Beauty & Health: 0.20
+Furniture & Home: 0.25

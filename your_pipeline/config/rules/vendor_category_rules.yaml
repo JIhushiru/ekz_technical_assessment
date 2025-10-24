@@ -1,5 +1,3 @@
-# adjustment_type: waived | delta
-# adjustment_value: null for waived, or a signed number for delta
 Evergreen Merchants:
   Automotive & Industrial:
     target_margin: 0.35

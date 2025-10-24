@@ -6,14 +6,19 @@ class ApiClient:
     def __init__(self, base_url: Optional[str] = None, api_key: Optional[str] = None):
         self.base_url = base_url or settings.api_base_url
         self.api_key = api_key or settings.api_key
-        self._client = httpx.Client(base_url=self.base_url, headers={"X-API-KEY": self.api_key}, timeout=30)
+        self._client = httpx.Client(
+            base_url=self.base_url,
+            headers={"X-API-KEY": self.api_key},
+            timeout=30,
+            follow_redirects=True,
+        )
 
     def close(self):
         self._client.close()
 
-    # /vendors
+    # /vendors/
     def get_vendors(self) -> List[Dict[str, Any]]:
-        r = self._client.get("/vendors")
+        r = self._client.get("/vendors/")  # trailing slash
         r.raise_for_status()
         return r.json()["data"]
 
