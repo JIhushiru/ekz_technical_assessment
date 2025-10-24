@@ -1,0 +1,22 @@
+# adjustment_type: waived | delta
+# adjustment_value: null for waived, or a signed number for delta
+Evergreen Merchants:
+  Automotive & Industrial:
+    target_margin: 0.35
+    adjustment_type: waived
+    adjustment_value: null
+Titan Labs:
+  Electronics:
+    target_margin: 0.40
+    adjustment_type: delta
+    adjustment_value: -10
+Prime Distributors:
+  Toys & Kids:
+    target_margin: 0.30
+    adjustment_type: delta
+    adjustment_value: 10
+Pacific Supply Group:
+  Furniture & Home:
+    target_margin: 0.35
+    adjustment_type: delta
+    adjustment_value: 20
