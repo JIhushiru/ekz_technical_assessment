@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Dict, Any, Optional
 from prefect import flow, task, get_run_logger
-
+from prefect.cache_policies import NO_CACHE
 from your_pipeline.clients.api_client import ApiClient
 from your_pipeline.db.repo import Database
 from your_pipeline.pricing import rules_loader
@@ -40,7 +40,7 @@ def extract_all() -> Dict[str, Any]:
     finally:
         api.close()
 
-@task
+@task(cache_policy=NO_CACHE) 
 def load_dim_tables(db: Database, extracted: Dict[str, Any]):
     vendors = [
         {"vendor_id": v["vendor_id"] if "vendor_id" in v else v["id"], "name": v["name"]}
@@ -57,7 +57,7 @@ def load_dim_tables(db: Database, extracted: Dict[str, Any]):
         db.upsert_categories(cats)
         db.upsert_shipping_tiers(tiers)
 
-@task
+@task(cache_policy=NO_CACHE) 
 def transform_and_load_products(db: Database, extracted: Dict[str, Any], rules_ctx: RuleContext):
     repriced_rows = []
     raw_rows = []
