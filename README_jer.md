@@ -2,12 +2,12 @@
 
 * This README serves as both the implementation guide and submission documentation for the EKZ Technical Assessment.
 
-A complete **end‑to‑end data pipeline** that:
-- Fetches product data from a local API
-- Applies detailed business repricing rules
-- Stores results in an SQLite database
-- Exposes repriced data through a FastAPI service
-- Runs manually or on schedule using Prefect
+End-to-end pipeline that:
+- **Extracts** product data from the provided local API
+- **Transforms** it using defined repricing rules
+- **Loads** results into **SQLite**
+- **Exposes** repriced data via **FastAPI**
+- Can run manually or on a schedule with **Prefect 3**
 
 ---
 
@@ -90,9 +90,9 @@ uvicorn your_pipeline.services.app:app --reload --port 9000
 Docs: [http://127.0.0.1:9000/docs](http://127.0.0.1:9000/docs)
 
 Endpoints:
-- `/repriced` → all repriced products  
+- `/repriced` → fetch all repriced products  
 - `/repriced?vendor_id=1` → filter by vendor  
-- `/repriced?category_id=3&brand_id=2` → multiple filters  
+- `/repriced?category_id=3&brand_id=2` → filter by category & brand
 
 ---
 
@@ -119,6 +119,42 @@ Covers:
 - Database upserts & idempotence
 
 ---
+
+## Verify Stored Prices Against Current Rules
+
+Use this utility to **recompute prices** from the raw product tables and compare them to what’s stored in `repriced_products`. It’s handy after changing:
+- pricing rules,
+- the pricing engine,
+- rounding logic, or
+- ETL mappings.
+
+### Run
+```bash
+# compare all products in the DB
+python -m your_pipeline.scripts.verify_pricing
+
+# quick sample (first 500)
+python -m your_pipeline.scripts.verify_pricing --limit 500
+
+### What it checks
+
+For each SKU, the verifier recomputes prices using the latest rules and compares:
+
+- `computed_price` (to cents)
+- `target_margin_used` (to 4 decimals)
+- `total_cost` (to cents)
+- `vendor_extra_cost_applied` (to cents)
+- `rule_source` (exact match)
+
+### Output & exit codes
+
+- Prints a summary and up to 20 mismatches with **recomputed** vs **stored** values.
+- Exit code **0**: all good  
+- Exit code **1**: mismatches found (useful in CI)
+
+### Example
+
+
 
 
 ## Typical Run Order
