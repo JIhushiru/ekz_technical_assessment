@@ -1,0 +1,146 @@
+[
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 1,
+        "shipping_cost": 30
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 1,
+        "shipping_cost": 80
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 1,
+        "shipping_cost": 150
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 1,
+        "shipping_cost": 250
+    },
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 2,
+        "shipping_cost": 30
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 2,
+        "shipping_cost": 90
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 2,
+        "shipping_cost": 180
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 2,
+        "shipping_cost": 280
+    },
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 3,
+        "shipping_cost": 20
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 3,
+        "shipping_cost": 100
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 3,
+        "shipping_cost": 180
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 3,
+        "shipping_cost": 300
+    },
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 4,
+        "shipping_cost": 50
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 4,
+        "shipping_cost": 100
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 4,
+        "shipping_cost": 170
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 4,
+        "shipping_cost": 250
+    },
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 5,
+        "shipping_cost": 20
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 5,
+        "shipping_cost": 70
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 5,
+        "shipping_cost": 200
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 5,
+        "shipping_cost": 260
+    },
+    {
+        "shipping_tier": "D",
+        "shipping_tier_id": 4,
+        "vendor_id": 6,
+        "shipping_cost": 50
+    },
+    {
+        "shipping_tier": "C",
+        "shipping_tier_id": 3,
+        "vendor_id": 6,
+        "shipping_cost": 90
+    },
+    {
+        "shipping_tier": "B",
+        "shipping_tier_id": 2,
+        "vendor_id": 6,
+        "shipping_cost": 190
+    },
+    {
+        "shipping_tier": "A",
+        "shipping_tier_id": 1,
+        "vendor_id": 6,
+        "shipping_cost": 280
+    }
+]

@@ -1,0 +1,302 @@
+[
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 7,
+        "vendor_id": 1
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 8,
+        "vendor_id": 1
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 5,
+        "vendor_id": 1
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 3,
+        "vendor_id": 1
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 1,
+        "vendor_id": 1
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 6,
+        "vendor_id": 1
+    },
+    {
+        "name": "Gardening",
+        "category_id": 9,
+        "vendor_id": 1
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 10,
+        "vendor_id": 1
+    },
+    {
+        "name": "Electronics",
+        "category_id": 4,
+        "vendor_id": 1
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 2,
+        "vendor_id": 1
+    },
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 9,
+        "vendor_id": 2
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 1,
+        "vendor_id": 2
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 5,
+        "vendor_id": 2
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 4,
+        "vendor_id": 2
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 6,
+        "vendor_id": 2
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 8,
+        "vendor_id": 2
+    },
+    {
+        "name": "Gardening",
+        "category_id": 2,
+        "vendor_id": 2
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 10,
+        "vendor_id": 2
+    },
+    {
+        "name": "Electronics",
+        "category_id": 3,
+        "vendor_id": 2
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 7,
+        "vendor_id": 2
+    },
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 9,
+        "vendor_id": 3
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 5,
+        "vendor_id": 3
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 1,
+        "vendor_id": 3
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 10,
+        "vendor_id": 3
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 2,
+        "vendor_id": 3
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 4,
+        "vendor_id": 3
+    },
+    {
+        "name": "Gardening",
+        "category_id": 8,
+        "vendor_id": 3
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 6,
+        "vendor_id": 3
+    },
+    {
+        "name": "Electronics",
+        "category_id": 3,
+        "vendor_id": 3
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 7,
+        "vendor_id": 3
+    },
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 4,
+        "vendor_id": 4
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 6,
+        "vendor_id": 4
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 2,
+        "vendor_id": 4
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 7,
+        "vendor_id": 4
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 10,
+        "vendor_id": 4
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 3,
+        "vendor_id": 4
+    },
+    {
+        "name": "Gardening",
+        "category_id": 9,
+        "vendor_id": 4
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 5,
+        "vendor_id": 4
+    },
+    {
+        "name": "Electronics",
+        "category_id": 8,
+        "vendor_id": 4
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 1,
+        "vendor_id": 4
+    },
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 3,
+        "vendor_id": 5
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 1,
+        "vendor_id": 5
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 6,
+        "vendor_id": 5
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 7,
+        "vendor_id": 5
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 10,
+        "vendor_id": 5
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 5,
+        "vendor_id": 5
+    },
+    {
+        "name": "Gardening",
+        "category_id": 2,
+        "vendor_id": 5
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 8,
+        "vendor_id": 5
+    },
+    {
+        "name": "Electronics",
+        "category_id": 9,
+        "vendor_id": 5
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 4,
+        "vendor_id": 5
+    },
+    {
+        "name": "Clothing & Accessories",
+        "category_id": 5,
+        "vendor_id": 6
+    },
+    {
+        "name": "Furniture & Home",
+        "category_id": 10,
+        "vendor_id": 6
+    },
+    {
+        "name": "Automotive & Industrial",
+        "category_id": 3,
+        "vendor_id": 6
+    },
+    {
+        "name": "Toys & Kids",
+        "category_id": 9,
+        "vendor_id": 6
+    },
+    {
+        "name": "Kitchen & Dining",
+        "category_id": 7,
+        "vendor_id": 6
+    },
+    {
+        "name": "Office Supplies",
+        "category_id": 8,
+        "vendor_id": 6
+    },
+    {
+        "name": "Gardening",
+        "category_id": 4,
+        "vendor_id": 6
+    },
+    {
+        "name": "Sports & Outdoors",
+        "category_id": 1,
+        "vendor_id": 6
+    },
+    {
+        "name": "Electronics",
+        "category_id": 6,
+        "vendor_id": 6
+    },
+    {
+        "name": "Beauty & Health",
+        "category_id": 2,
+        "vendor_id": 6
+    }
+]

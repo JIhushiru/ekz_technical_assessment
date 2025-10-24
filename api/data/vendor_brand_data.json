@@ -1,0 +1,602 @@
+[
+    {
+        "name": "RapidStream",
+        "brand_id": 2,
+        "vendor_id": 1
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 20,
+        "vendor_id": 1
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 18,
+        "vendor_id": 1
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 17,
+        "vendor_id": 1
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 6,
+        "vendor_id": 1
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 3,
+        "vendor_id": 1
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 13,
+        "vendor_id": 1
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 9,
+        "vendor_id": 1
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 15,
+        "vendor_id": 1
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 5,
+        "vendor_id": 1
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 11,
+        "vendor_id": 1
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 7,
+        "vendor_id": 1
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 1,
+        "vendor_id": 1
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 8,
+        "vendor_id": 1
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 4,
+        "vendor_id": 1
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 14,
+        "vendor_id": 1
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 10,
+        "vendor_id": 1
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 19,
+        "vendor_id": 1
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 16,
+        "vendor_id": 1
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 12,
+        "vendor_id": 1
+    },
+    {
+        "name": "RapidStream",
+        "brand_id": 12,
+        "vendor_id": 2
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 7,
+        "vendor_id": 2
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 4,
+        "vendor_id": 2
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 2,
+        "vendor_id": 2
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 14,
+        "vendor_id": 2
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 6,
+        "vendor_id": 2
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 5,
+        "vendor_id": 2
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 16,
+        "vendor_id": 2
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 17,
+        "vendor_id": 2
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 15,
+        "vendor_id": 2
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 11,
+        "vendor_id": 2
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 19,
+        "vendor_id": 2
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 13,
+        "vendor_id": 2
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 3,
+        "vendor_id": 2
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 18,
+        "vendor_id": 2
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 9,
+        "vendor_id": 2
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 8,
+        "vendor_id": 2
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 1,
+        "vendor_id": 2
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 10,
+        "vendor_id": 2
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 20,
+        "vendor_id": 2
+    },
+    {
+        "name": "RapidStream",
+        "brand_id": 4,
+        "vendor_id": 3
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 2,
+        "vendor_id": 3
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 6,
+        "vendor_id": 3
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 17,
+        "vendor_id": 3
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 8,
+        "vendor_id": 3
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 15,
+        "vendor_id": 3
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 19,
+        "vendor_id": 3
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 13,
+        "vendor_id": 3
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 1,
+        "vendor_id": 3
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 5,
+        "vendor_id": 3
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 10,
+        "vendor_id": 3
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 18,
+        "vendor_id": 3
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 11,
+        "vendor_id": 3
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 20,
+        "vendor_id": 3
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 7,
+        "vendor_id": 3
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 16,
+        "vendor_id": 3
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 12,
+        "vendor_id": 3
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 3,
+        "vendor_id": 3
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 14,
+        "vendor_id": 3
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 9,
+        "vendor_id": 3
+    },
+    {
+        "name": "RapidStream",
+        "brand_id": 14,
+        "vendor_id": 4
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 20,
+        "vendor_id": 4
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 13,
+        "vendor_id": 4
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 6,
+        "vendor_id": 4
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 7,
+        "vendor_id": 4
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 4,
+        "vendor_id": 4
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 18,
+        "vendor_id": 4
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 9,
+        "vendor_id": 4
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 17,
+        "vendor_id": 4
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 1,
+        "vendor_id": 4
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 16,
+        "vendor_id": 4
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 12,
+        "vendor_id": 4
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 3,
+        "vendor_id": 4
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 2,
+        "vendor_id": 4
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 8,
+        "vendor_id": 4
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 15,
+        "vendor_id": 4
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 11,
+        "vendor_id": 4
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 19,
+        "vendor_id": 4
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 10,
+        "vendor_id": 4
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 5,
+        "vendor_id": 4
+    },
+    {
+        "name": "RapidStream",
+        "brand_id": 3,
+        "vendor_id": 5
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 10,
+        "vendor_id": 5
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 4,
+        "vendor_id": 5
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 2,
+        "vendor_id": 5
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 11,
+        "vendor_id": 5
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 12,
+        "vendor_id": 5
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 18,
+        "vendor_id": 5
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 17,
+        "vendor_id": 5
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 14,
+        "vendor_id": 5
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 7,
+        "vendor_id": 5
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 20,
+        "vendor_id": 5
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 9,
+        "vendor_id": 5
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 19,
+        "vendor_id": 5
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 6,
+        "vendor_id": 5
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 15,
+        "vendor_id": 5
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 13,
+        "vendor_id": 5
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 8,
+        "vendor_id": 5
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 5,
+        "vendor_id": 5
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 1,
+        "vendor_id": 5
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 16,
+        "vendor_id": 5
+    },
+    {
+        "name": "RapidStream",
+        "brand_id": 19,
+        "vendor_id": 6
+    },
+    {
+        "name": "Phoenix Rise",
+        "brand_id": 5,
+        "vendor_id": 6
+    },
+    {
+        "name": "Golden Hawk",
+        "brand_id": 10,
+        "vendor_id": 6
+    },
+    {
+        "name": "Copper Canyon",
+        "brand_id": 12,
+        "vendor_id": 6
+    },
+    {
+        "name": "BrightLeaf",
+        "brand_id": 17,
+        "vendor_id": 6
+    },
+    {
+        "name": "IronClad",
+        "brand_id": 9,
+        "vendor_id": 6
+    },
+    {
+        "name": "StoneBridge",
+        "brand_id": 6,
+        "vendor_id": 6
+    },
+    {
+        "name": "Crimson Peak",
+        "brand_id": 20,
+        "vendor_id": 6
+    },
+    {
+        "name": "Blue Horizon",
+        "brand_id": 15,
+        "vendor_id": 6
+    },
+    {
+        "name": "Night Owl",
+        "brand_id": 13,
+        "vendor_id": 6
+    },
+    {
+        "name": "Black Ridge",
+        "brand_id": 14,
+        "vendor_id": 6
+    },
+    {
+        "name": "SilverFox",
+        "brand_id": 2,
+        "vendor_id": 6
+    },
+    {
+        "name": "StormForge",
+        "brand_id": 16,
+        "vendor_id": 6
+    },
+    {
+        "name": "Thunderbolt",
+        "brand_id": 11,
+        "vendor_id": 6
+    },
+    {
+        "name": "Red Eagle",
+        "brand_id": 7,
+        "vendor_id": 6
+    },
+    {
+        "name": "TripleTake",
+        "brand_id": 1,
+        "vendor_id": 6
+    },
+    {
+        "name": "TrueNorth",
+        "brand_id": 8,
+        "vendor_id": 6
+    },
+    {
+        "name": "IronWolf",
+        "brand_id": 4,
+        "vendor_id": 6
+    },
+    {
+        "name": "Shadow Creek",
+        "brand_id": 18,
+        "vendor_id": 6
+    },
+    {
+        "name": "Wildflower Co",
+        "brand_id": 3,
+        "vendor_id": 6
+    }
+]

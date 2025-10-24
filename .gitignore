@@ -1,0 +1,33 @@
+# Logs
+*.logs
+*.logs.*
+!sample.logs
+
+# Pycharm
+.idea/
+**/__pycache__/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+!sample.env
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

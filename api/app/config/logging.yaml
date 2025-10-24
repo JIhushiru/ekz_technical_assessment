@@ -1,0 +1,75 @@
+version: 1
+disable_existing_loggers: false
+
+filters:
+  max_warning:
+    (): api.app.config.settings.MaxLevelFilter
+    max_level: 30  # logging.WARNING is 30
+
+formatters:
+  detailed:
+    format: '[%(asctime)s] %(levelname)s - [%(name)s:%(lineno)s] - %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+  json:
+    (): api.app.config.settings.JsonFormatter  # Custom
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: detailed
+    stream: ext://sys.stdout
+
+  info_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    formatter: json
+    filename: api/logs/app_info.logs
+    maxBytes: 10485760  # 10MB
+    backupCount: 5
+    encoding: utf8
+    filters: [max_warning]
+
+  error_file_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: json
+    filename: api/logs/app_error.logs
+    maxBytes: 10485760  # 10MB
+    backupCount: 5
+    encoding: utf8
+
+loggers:
+  api:
+    level: DEBUG
+    handlers:
+      - console
+      - info_file_handler
+      - error_file_handler
+    propagate: false
+
+  uvicorn:
+    level: INFO
+    handlers:
+      - console
+      - info_file_handler
+    propagate: false
+
+    uvicorn.error:
+      level: ERROR
+      handlers:
+        - console
+        - error_file_handler
+      propagate: false
+
+    uvicorn.access:
+      level: INFO
+      handlers:
+        - console
+        - info_file_handler
+      propagate: false
+
+root:
+  level: WARNING
+  handlers:
+    - console

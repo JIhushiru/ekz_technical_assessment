@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Evergreen Merchants",
+        "vendor_id": 1
+    },
+    {
+        "name": "Titan Labs",
+        "vendor_id": 2
+    },
+    {
+        "name": "Prime Distributors",
+        "vendor_id": 3
+    },
+    {
+        "name": "Pacific Supply Group",
+        "vendor_id": 4
+    },
+    {
+        "name": "Brightside Trading",
+        "vendor_id": 5
+    },
+    {
+        "name": "Global Supplies Ltd",
+        "vendor_id": 6
+    }
+]
