@@ -10,20 +10,24 @@ from your_pipeline.models import ProductIn, RuleContext, VendorRule, VCOverride
 from your_pipeline.pricing.engine import compute_price
 
 
+def _norm(s: str) -> str:
+    return s.strip().replace("’","'").replace("＆","&").casefold()
+
 def _rules_to_ctx(rules_dict: Dict[str, Any]) -> RuleContext:
-    vendor_rules = {k: VendorRule(**v) for k, v in rules_dict["vendor_rules"].items()}
+    vendor_rules = {_norm(k): VendorRule(**v) for k, v in rules_dict["vendor_rules"].items()}
+
     vc_rules: Dict[str, Dict[str, VCOverride]] = {
-        ven: {cname: VCOverride(**spec) for cname, spec in cats.items()}
+        _norm(ven): {_norm(cat): VCOverride(**spec) for cat, spec in cats.items()}
         for ven, cats in rules_dict["vendor_category_rules"].items()
     }
+
     return RuleContext(
         vendor_rules=vendor_rules,
-        category_rules=rules_dict["category_rules"],
+        category_rules={_norm(k): float(v) for k, v in rules_dict["category_rules"].items()},
         vendor_category_rules=vc_rules,
-        brand_rules=rules_dict["brand_rules"],
-        default_target_margin=rules_dict.get("default_target_margin", 0.12),
+        brand_rules={_norm(k): float(v) for k, v in rules_dict["brand_rules"].items()},
+        default_target_margin=float(rules_dict.get("default_target_margin", 0.12)),
     )
-
 
 @task(retries=2, retry_delay_seconds=5)
 def extract_all() -> Dict[str, Any]:
