@@ -1,25 +1,31 @@
-from your_pipeline.models import (
-    ProductIn, RuleContext, VendorRule, VCOverride
-)
+# your_pipeline/tests/test_engine_rules.py
+
+from your_pipeline.models import ProductIn, RuleContext, VendorRule, VCOverride
 from your_pipeline.pricing.engine import compute_price
 
+# mirror engine._norm behavior so RuleContext keys match engine lookups
+def norm(s: str) -> str:
+    return s.strip().replace("’", "'").replace("＆", "&").casefold()
 
 def make_ctx():
     return RuleContext(
         vendor_rules={
-            "Titan Labs": VendorRule(extra_cost=20, target_margin=0.20),
-            "Prime Distributors": VendorRule(extra_cost=10, target_margin=0.15),
+            norm("Titan Labs"): VendorRule(extra_cost=20, target_margin=0.20),
+            norm("Prime Distributors"): VendorRule(extra_cost=10, target_margin=0.15),
         },
-        category_rules={"Electronics": 0.35, "Toys & Kids": 0.25},
+        category_rules={
+            norm("Electronics"): 0.35,
+            norm("Toys & Kids"): 0.25,
+        },
         vendor_category_rules={
-            "Titan Labs": {
-                "Electronics": VCOverride(
+            norm("Titan Labs"): {
+                norm("Electronics"): VCOverride(
                     target_margin=0.40, adjustment_type="delta", adjustment_value=-10
                 )
             }
         },
-        brand_rules={"StoneBridge": 0.60},
-        default_target_margin=0.12
+        brand_rules={norm("StoneBridge"): 0.60},
+        default_target_margin=0.12,
     )
 
 def test_vendor_category_overrides():
@@ -80,4 +86,3 @@ def test_fallback_category_then_vendor_then_default():
     )
     o3 = compute_price(p3, ctx)
     assert o3.rule_source == "default"
-
