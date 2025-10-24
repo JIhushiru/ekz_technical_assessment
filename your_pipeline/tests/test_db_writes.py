@@ -1,4 +1,3 @@
-# your_pipeline/tests/test_db_writes.py
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -56,6 +55,9 @@ def test_upsert_vendors_and_repricings_idempotent():
                     .scalar_one()
                 )
                 assert out.computed_price == 199.95
+                assert out.rule_source == "vendor_category"
+                assert out.target_margin_used == 0.4
+                assert out.vendor_extra_cost_applied == 10.0
         finally:
             # Important for Windows: release SQLite file handle before temp cleanup
             db.dispose()
