@@ -48,7 +48,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3️3. Configure environment variables
+### 3. Configure environment variables
 Copy `.env.example` → `.env` and fill in:
 ```bash
 API_BASE_URL=http://127.0.0.1:8000/api/v1
@@ -84,10 +84,9 @@ Flow run '...' - Finished in state Completed()
 ```
 
 ### 3. Start the **Query API (Read Service)**
-(Optional, after the DB is populated)
+After the flow successfully populates the database, start the FastAPI service to query and inspect repriced products:
 ```bash
 uvicorn your_pipeline.services.app:app --reload --port 9000
-```
 Docs: [http://127.0.0.1:9000/docs](http://127.0.0.1:9000/docs)
 
 Endpoints:
