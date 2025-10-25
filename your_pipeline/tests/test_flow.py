@@ -1,16 +1,17 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 import math
 import os
 
 import pytest
-from sqlalchemy import select
+from sqlalchemy import select, create_engine
+from sqlalchemy.pool import NullPool
 
 import your_pipeline.flows.repricing_flow as flows
 from your_pipeline.db.repo import Database
 from your_pipeline.db.models import RepricedProduct
 
-# keep Prefect quiet during tests
 os.environ.setdefault("PREFECT_LOGGING_LEVEL", "ERROR")
 os.environ.setdefault("PREFECT_LOGGING_TO_CONSOLE", "0")
 
@@ -38,17 +39,17 @@ class FakeApiClient:
         return [{"shipping_tier_id": 30, "shipping_tier": "STD", "shipping_cost": 15.0}]
 
     def get_products(self, vendor_id: int):
-        if vendor_id == 1:  # Titan Labs
+        if vendor_id == 1:
             return [
                 {"sku": "TL-E-1", "name": "Gadget", "cost": 100.0,
-                 "brand_id": None, "category_id": 20, "shipping_tier_id": 30},  # VC path
+                 "brand_id": None, "category_id": 20, "shipping_tier_id": 30},
                 {"sku": "TL-TK-1", "name": "Toy", "cost": 50.0,
-                 "brand_id": None, "category_id": 21, "shipping_tier_id": 30},  # category path
+                 "brand_id": None, "category_id": 21, "shipping_tier_id": 30},
             ]
-        if vendor_id == 2:  # Prime Distributors
+        if vendor_id == 2:
             return [
                 {"sku": "PD-BRAND-1", "name": "Headphones", "cost": 80.0,
-                 "brand_id": 10, "category_id": 20, "shipping_tier_id": None},  # brand path
+                 "brand_id": 10, "category_id": 20, "shipping_tier_id": None},
             ]
         return []
 
@@ -59,24 +60,16 @@ def fake_rules_loader():
             "titan labs": {"extra_cost": 20, "target_margin": 0.20},
             "prime distributors": {"extra_cost": 10, "target_margin": 0.15},
         },
-        "category_rules": {
-            "electronics": 0.35,
-            "toys & kids": 0.25,
-        },
+        "category_rules": {"electronics": 0.35, "toys & kids": 0.25},
         "vendor_category_rules": {
-            "titan labs": {
-                "electronics": {"target_margin": 0.40, "adjustment_type": "delta", "adjustment_value": -10}
-            }
+            "titan labs": {"electronics": {"target_margin": 0.40, "adjustment_type": "delta", "adjustment_value": -10}}
         },
-        "brand_rules": {
-            "stonebridge": 0.60,
-        },
+        "brand_rules": {"stonebridge": 0.60},
         "default_target_margin": 0.12,
     }
 
 
 class PatchedDatabase:
-    """Proxy Database to a temp SQLite URL and keep track of created engines."""
     instances = []
 
     def __init__(self, db_url: str | None = None):
@@ -93,20 +86,23 @@ def test_repricing_flow_e2e(monkeypatch):
     with TemporaryDirectory() as td:
         db_url = f"sqlite:///{Path(td) / 'prefect_flow.db'}"
 
-        # patch flow dependencies
+        monkeypatch.setattr(flows, "settings", SimpleNamespace(db_url=db_url), raising=False)
+        monkeypatch.setattr(flows, "_engine", lambda: create_engine(db_url, future=True, poolclass=NullPool), raising=True)
         monkeypatch.setattr(flows, "ApiClient", FakeApiClient)
         monkeypatch.setattr(flows.rules_loader, "load_all_rules", fake_rules_loader)
+
         PatchedDatabase._DB_URL = db_url
+        PatchedDatabase.instances = []
         monkeypatch.setattr(flows, "Database", PatchedDatabase)
 
-        # run the flow
         flows.repricing_flow()
 
-        # release SQLite handles created inside the flow
         for inst in list(PatchedDatabase.instances):
-            inst.dispose()
+            try:
+                inst.dispose()
+            except Exception:
+                pass
 
-        # assert results
         db = Database(db_url=db_url)
         try:
             with db.session() as s:
